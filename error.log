@@ -1,0 +1,24 @@
+2025-03-02 00:53:04,279:ERROR:Invalid message: {"device_id": "1001", "sensor_type": "temp", "sensor_value": 22.5, "timestamp": "2025-03-02T00:53:04.274586"} | Error: JSON Decode Error: 'str' object has no attribute 'read'
+2025-03-02 00:53:04,279:ERROR:Invalid message: {"device_id": "1001", "sensor_type": "temp", "sensor_value": 22.5, "timestamp": "2025-03-02T00:53:04.274586"} | Error: Validation failed
+2025-03-02 00:57:19,935:ERROR:Invalid message: {"device_id": "1001", "sensor_type": "temp", "sensor_value": 22.5, "timestamp": "2025-03-02T00:57:19.930632"} | Error: JSON Decode Error: 'str' object has no attribute 'read'
+2025-03-02 00:57:19,935:ERROR:Invalid message: {"device_id": "1001", "sensor_type": "temp", "sensor_value": 22.5, "timestamp": "2025-03-02T00:57:19.930632"} | Error: Validation failed
+2025-03-02 01:04:02,840:ERROR:Invalid message: {"device_id": "1001", "sensor_type": "temp", "sensor_value": 22.5, "timestamp": "2025-03-02T01:04:02.834941"} | Error: JSON Decode Error: 'str' object has no attribute 'read'
+2025-03-02 01:04:02,840:ERROR:Invalid message: {"device_id": "1001", "sensor_type": "temp", "sensor_value": 22.5, "timestamp": "2025-03-02T01:04:02.834941"} | Error: Validation failed
+2025-03-02 01:07:14,634:ERROR:Invalid message: {"device_id": "esp32_001", "sensor_type": "temperature", "sensor_value": 28.5, "timestamp": "2025-03-01T10:30:45Z"} | Error: JSON Decode Error: 'str' object has no attribute 'read'
+2025-03-02 01:07:14,635:ERROR:Invalid message: {"device_id": "esp32_001", "sensor_type": "temperature", "sensor_value": 28.5, "timestamp": "2025-03-01T10:30:45Z"} | Error: Validation failed
+2025-03-02 01:24:03,398:ERROR:Invalid Message: {"device_id": 1001, "sensor_type": "temperature", "sensor_value": 28.5, "timestamp": "2025-03-02T01:24:03.397743"} | Error : Invalid data type for key : device_id 
+2025-03-02 01:24:03,398:ERROR:Invalid message: {"device_id": 1001, "sensor_type": "temperature", "sensor_value": 28.5, "timestamp": "2025-03-02T01:24:03.397743"} | Error: Validation failed
+2025-03-02 01:31:58,947:ERROR:Task was destroyed but it is pending!
+task: <Task pending name='Task-162' coro=<Client.reconnect() running at /Users/nimesh/codes/projects/iot_prj/my_env/lib/python3.12/site-packages/gmqtt/client.py:264> wait_for=<Future pending cb=[Task.task_wakeup()]> cb=[MqttPackageHandler._handle_exception_in_future()]>
+2025-03-02 01:32:15,186:ERROR:Invalid Message: {"device_id": "1002", "sensor_type": "temperature", "sensor_value": 22, "timestamp": "2025-03-02T01:32:15.185575"} | Error : Invalid data type for key : sensor_value 
+2025-03-02 01:32:15,186:ERROR:Invalid message: {"device_id": "1002", "sensor_type": "temperature", "sensor_value": 22, "timestamp": "2025-03-02T01:32:15.185575"} | Error: Validation failed
+2025-03-02 01:35:29,294:ERROR:Invalid Message: {"device_id": "1002", "sensor_type": "temperature", "sensor_value": 22, "timestamp": "2025-03-02T01:35:29.294515"} | Error : Invalid data type for key : sensor_value 
+2025-03-02 01:35:29,295:ERROR:Invalid message: {"device_id": "1002", "sensor_type": "temperature", "sensor_value": 22, "timestamp": "2025-03-02T01:35:29.294515"} | Error: Validation failed
+2025-03-02 01:37:44,275:ERROR:Invalid Message: {"device_id": "1002", "sensor_type": "temperature", "sensor_value": "22.5", "timestamp": "12:13:55"} | Error : Invalid data type for key : sensor_value 
+2025-03-02 01:37:44,275:ERROR:Invalid message: {"device_id": "1002", "sensor_type": "temperature", "sensor_value": "22.5", "timestamp": "12:13:55"} | Error: Validation failed
+2025-03-02 01:38:33,584:ERROR:Invalid Message: {"device_id": "1002", "sensor_type": "temperature", "sensor_value": 22.5, "timestamp": "12:13:55"} | Error : Invalid ISO8601 Timestamp formate : timestamp 
+2025-03-02 01:38:33,584:ERROR:Invalid message: {"device_id": "1002", "sensor_type": "temperature", "sensor_value": 22.5, "timestamp": "12:13:55"} | Error: Validation failed
+2025-03-02 11:19:06,089:ERROR:Invalid message: {"device_id": "1002", "sensor_type": "temperature", "sensor_value": 22.5, "timestamp": "2025-03-02T11:19:06.089396"} | Error: near "VALUE": syntax error
+2025-03-02 11:20:28,747:ERROR:Invalid message: {"device_id": "1002", "sensor_type": "temperature", "sensor_value": 22.5, "timestamp": "2025-03-02T11:20:28.746978"} | Error: near "VALUE": syntax error
+2025-03-02 11:21:46,072:ERROR:Invalid message: {"device_id": "1002", "sensor_type": "temperature", "sensor_value": 22.5, "timestamp": "2025-03-02T11:21:46.071519"} | Error: near "VALUE": syntax error
+2025-03-02 11:26:18,322:ERROR:Invalid message: {"device_id": "1002", "sensor_type": "temperature", "sensor_value": 22.5, "timestamp": "2025-03-02T11:26:18.321175"} | Error: near "VALUE": syntax error
