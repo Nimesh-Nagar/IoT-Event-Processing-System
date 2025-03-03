@@ -1,8 +1,10 @@
 from flask import Flask, jsonify, request
 import sqlite3
+import os
 
 app = Flask(__name__)
 API_VERSION = '/api/v1'
+DATABASE_PATH = os.path.join(os.path.dirname(__file__), '../mqtt_client/iot_database.db')
 
 
 @app.route("/", methods=['GET'])
@@ -16,7 +18,7 @@ def get_devices():
     List all registered devices and their last seen details
     '''
 
-    conn = sqlite3.connect('iot_database.db')   # assign proper path
+    conn = sqlite3.connect(DATABASE_PATH)   # assign proper path
     c = conn.cursor()
     
     c.execute("SELECT * FROM Devices")
@@ -33,7 +35,7 @@ def get_events():
     if not device_id:
         return jsonify({"error": "Missing required query parameter: ?device_id="}), 400  # HTTP 400 Bad Request
 
-    conn = sqlite3.connect('iot_database.db')
+    conn = sqlite3.connect(DATABASE_PATH)
     c = conn.cursor()    
     c.execute("SELECT event_id, sensor_type, sensor_value, timestamp FROM Events WHERE device_id = ? ORDER BY timestamp DESC", (device_id,))
     events = c.fetchall()
