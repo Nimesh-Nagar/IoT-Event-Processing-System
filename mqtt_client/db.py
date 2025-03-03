@@ -2,13 +2,33 @@
 import logging
 import sqlite3
 import json
+import os
 from datetime import datetime
 
+DB_PATH = os.getenv("DB_PATH")
+LOG_PATH = os.getenv('LOG_PATH')
+
+LOG_FILE = os.path.join(LOG_PATH, "messages.log")
+DB_FILE = os.path.join(DB_PATH, "iot_database.db")
+
+# Ensure directories exists
+os.makedirs(DB_PATH, exist_ok=True)
+os.makedirs(LOG_PATH, exist_ok=True)
+
+# Ensure log file exists
+if not os.path.exists(LOG_FILE):
+    open(LOG_FILE, "w").close()  # Create an empty file
+
+if not os.path.exists(DB_FILE):
+    open(DB_FILE, "w").close()  # Create an empty file
+
 # logging configurations
-logging.basicConfig(filename='error.log', level=logging.ERROR, format='%(asctime)s:%(levelname)s:%(message)s')
+logging.basicConfig(filename=LOG_FILE, level=logging.INFO, format='%(asctime)s - %(levelname)s: %(message)s')
+
+# logging.basicConfig(filename='error.log', level=logging.INFO, format='%(asctime)s:%(levelname)s:%(message)s')
 
 # Database setup
-conn = sqlite3.connect('iot_database.db')
+conn = sqlite3.connect(DB_FILE, check_same_thread=False)
 c = conn.cursor()
 
 c.execute('''CREATE TABLE IF NOT EXISTS Devices (
@@ -50,9 +70,10 @@ def store_valid_message(message):
         
         conn.commit()
 
-        print("-----------Stored Valid Message in DB -----------")
+        print("----------- Stored Valid Message in DB -----------")
         
 
     except Exception as error_msg:
-        log_invalid_message(message, error_msg)
+        # log_invalid_message(message, error_msg)
+        print(f"[Error] : {error_msg}")
 

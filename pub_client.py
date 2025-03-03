@@ -24,9 +24,9 @@ async def publish_message():
     await client.connect(MQTT_HOST, PORT)
 
     message1 = {
-        "device_id": "1001",
+        "device_id": 1001,
         "sensor_type": "humidity",
-        "sensor_value": 71.6,
+        "sensor_value": 74.6,
         "timestamp": datetime.now().isoformat()
         # "timestamp": "12:13:55"
     }

@@ -1,8 +1,19 @@
 import json
 import logging 
+import os
 from datetime import datetime
 
-logging.basicConfig(filename='error.log', level=logging.ERROR, format='%(asctime)s:%(levelname)s:%(message)s')
+LOG_PATH = os.getenv('LOG_PATH')
+LOG_FILE = os.path.join(LOG_PATH, "messages.log")
+
+# Ensure logs directory exists
+os.makedirs(LOG_PATH, exist_ok=True)
+
+# Ensure log file exists
+if not os.path.exists(LOG_FILE):
+    open(LOG_FILE, "w").close()  # Create an empty file
+
+logging.basicConfig(filename=LOG_FILE, level=logging.INFO, format='%(asctime)s - %(levelname)s: %(message)s')
 
 
 # Payload Schema
