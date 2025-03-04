@@ -1,0 +1,39 @@
+2025-03-04 12:33:37,203 - INFO - Starting Flask API service
+2025-03-04 12:33:37,214 - INFO - [31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on all addresses (0.0.0.0)
+ * Running on http://127.0.0.1:5000
+ * Running on http://192.168.191.130:5000
+2025-03-04 12:33:37,214 - INFO - [33mPress CTRL+C to quit[0m
+2025-03-04 12:33:37,214 - INFO -  * Restarting with stat
+2025-03-04 12:33:37,298 - INFO - Starting Flask API service
+2025-03-04 12:33:37,303 - WARNING -  * Debugger is active!
+2025-03-04 12:33:37,304 - INFO -  * Debugger PIN: 776-848-266
+2025-03-04 12:35:01,952 - INFO - Starting Flask API service
+2025-03-04 12:35:01,959 - INFO - [31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on all addresses (0.0.0.0)
+ * Running on http://127.0.0.1:5000
+ * Running on http://192.168.191.130:5000
+2025-03-04 12:35:01,959 - INFO - [33mPress CTRL+C to quit[0m
+2025-03-04 12:35:01,959 - INFO -  * Restarting with stat
+2025-03-04 12:35:02,044 - INFO - Starting Flask API service
+2025-03-04 12:35:02,049 - WARNING -  * Debugger is active!
+2025-03-04 12:35:02,049 - INFO -  * Debugger PIN: 776-848-266
+2025-03-04 12:35:14,672 - INFO - Fetching events for device_id: 1002
+2025-03-04 12:35:14,673 - INFO - 5 events fetched for device_id: 1002
+2025-03-04 12:35:14,673 - INFO - 192.168.191.130 - - [04/Mar/2025 12:35:14] "GET /api/v1/events?device_id=1002 HTTP/1.1" 200 -
+2025-03-04 12:35:14,733 - INFO - 192.168.191.130 - - [04/Mar/2025 12:35:14] "[33mGET /favicon.ico HTTP/1.1[0m" 404 -
+2025-03-04 12:35:24,043 - INFO - Fetching all devices
+2025-03-04 12:35:24,044 - INFO - 2 devices fetched successfully
+2025-03-04 12:35:24,044 - INFO - 192.168.191.130 - - [04/Mar/2025 12:35:24] "GET /api/v1/devices HTTP/1.1" 200 -
+2025-03-04 12:36:51,419 - INFO -  * Detected change in '/home/nimesh/cloud/IoT-Event-Processing-System/rest_api/testapp.py', reloading
+2025-03-04 12:36:51,436 - INFO -  * Restarting with stat
+2025-03-04 12:36:51,516 - INFO - Starting Flask API service
+2025-03-04 12:36:51,521 - WARNING -  * Debugger is active!
+2025-03-04 12:36:51,521 - INFO -  * Debugger PIN: 776-848-266
+2025-03-04 12:37:29,638 - INFO -  * Detected change in '/home/nimesh/cloud/IoT-Event-Processing-System/rest_api/testapp.py', reloading
+2025-03-04 12:37:29,655 - INFO -  * Restarting with stat
+2025-03-04 12:37:29,733 - INFO - Starting Flask API service
+2025-03-04 12:37:29,738 - WARNING -  * Debugger is active!
+2025-03-04 12:37:29,738 - INFO -  * Debugger PIN: 776-848-266
+2025-03-04 12:37:45,796 - INFO -  * Detected change in '/home/nimesh/cloud/IoT-Event-Processing-System/rest_api/app.py', reloading
+2025-03-04 12:37:45,818 - INFO -  * Restarting with stat
