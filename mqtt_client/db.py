@@ -1,24 +1,24 @@
-# db.py
+
 import logging
 import sqlite3
 import json
 import os
 from datetime import datetime
 
-DB_PATH = os.getenv("DB_PATH")
-LOG_PATH = os.getenv('LOG_PATH')
+DB_PATH = "./data"
+LOG_PATH = "./logs"
+
 
 LOG_FILE = os.path.join(LOG_PATH, "messages.log")
 DB_FILE = os.path.join(DB_PATH, "iot_database.db")
 
+
+print(f"\n--------------> {LOG_FILE} \n")
+
 # Ensure directories exists
 os.makedirs(DB_PATH, exist_ok=True)
-os.makedirs(LOG_PATH, exist_ok=True)
 
 # Ensure log file exists
-if not os.path.exists(LOG_FILE):
-    open(LOG_FILE, "w").close()  # Create an empty file
-
 if not os.path.exists(DB_FILE):
     open(DB_FILE, "w").close()  # Create an empty file
 
@@ -47,7 +47,7 @@ conn.commit()
 
 
 def log_invalid_message(message, error_reason):
-    error_msg = f"Invalid message: {message} | Error: {error_reason}"
+    error_msg = f" Error: {error_reason}"
     logging.error(error_msg)
     print(error_msg)
 
@@ -74,6 +74,6 @@ def store_valid_message(message):
         
 
     except Exception as error_msg:
-        # log_invalid_message(message, error_msg)
+        log_invalid_message(message, error_msg)
         print(f"[Error] : {error_msg}")
 

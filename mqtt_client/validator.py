@@ -3,7 +3,7 @@ import logging
 import os
 from datetime import datetime
 
-LOG_PATH = os.getenv('LOG_PATH')
+LOG_PATH = "./logs"
 LOG_FILE = os.path.join(LOG_PATH, "messages.log")
 
 # Ensure logs directory exists
