@@ -10,7 +10,8 @@ logging.basicConfig(filename=os.path.join(LOG_DIR, 'api.log'), level=logging.INF
 
 app = Flask(__name__)
 API_VERSION = '/api/v1'
-DATABASE_PATH = os.path.join(os.path.dirname(__file__), '../mqtt_client/data/iot_database.db')
+# DB_PATH = os.path.join(os.path.dirname(__file__), '../mqtt_client/data/iot_database.db')
+DB_PATH = os.getenv("DB_PATH", "/data/iot_database.db")
 
 @app.route("/", methods=['GET'])
 def home():
@@ -24,7 +25,7 @@ def get_devices():
     '''
     logging.info("Fetching all devices")
     try:
-        conn = sqlite3.connect(DATABASE_PATH)   # assign proper path
+        conn = sqlite3.connect(DB_PATH)   # assign proper path
         c = conn.cursor()
         
         c.execute("SELECT * FROM Devices")
@@ -47,7 +48,7 @@ def get_events():
 
     try:
         logging.info(f"Fetching events for device_id: {device_id}")
-        conn = sqlite3.connect(DATABASE_PATH)
+        conn = sqlite3.connect(DB_PATH)
         c = conn.cursor()    
         c.execute("SELECT event_id, sensor_type, sensor_value, timestamp FROM Events WHERE device_id = ? ORDER BY timestamp DESC", (device_id,))
         events = c.fetchall()

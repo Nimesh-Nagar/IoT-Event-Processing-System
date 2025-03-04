@@ -8,10 +8,14 @@ from validator import validation_message
 from db import log_invalid_message, store_valid_message
 
 
-MQTT_HOST ='localhost'
-PORT = 1883
-SUB_TOPIC = 'device/events'
+# MQTT_HOST ='localhost'
+# SUB_TOPIC = 'device/events'
+
+SUB_TOPIC = os.getenv("MQTT_TOPIC", "devices/events")
+MQTT_HOST = os.getenv("MQTT_BROKER_HOST", "mqtt-broker")
+
 QOS = 0
+PORT = 1883
 
 STOP = asyncio.Event()
 
@@ -61,9 +65,24 @@ async def main(broker_host, port):
 
 
 if __name__ == '__main__':
-    loop = asyncio.new_event_loop()
+    # loop = asyncio.new_event_loop() # Ensuring a clean event loop
+    # asyncio.set_event_loop(loop)
+
+    # if os.name != "nt":  # Unix-based signal handling
+    #     loop.add_signal_handler(signal.SIGINT, ask_exit)
+    #     loop.add_signal_handler(signal.SIGTERM, ask_exit)
+
+    # try:
+    #     loop.run_until_complete(main(MQTT_HOST, PORT))
+    # finally:
+    #     loop.close()
+
+    loop = asyncio.get_event_loop()  # Use the default event loop
 
     loop.add_signal_handler(signal.SIGINT, ask_exit)
     loop.add_signal_handler(signal.SIGTERM, ask_exit)
 
-    loop.run_until_complete(main(MQTT_HOST, PORT))
+    asyncio.run(main(MQTT_HOST, PORT))  # Use asyncio.run instead of run_until_complete()
+
+    
+

@@ -13,4 +13,4 @@ RUN pip install --no-cache-dir -r requirements.txt
 ENV BROKER_HOST=mosquitto-broker
 
 # Run the subscriber script
-CMD ["python3", "subscriber.py"]
+CMD ["python3", "sub_client.py"]

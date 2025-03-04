@@ -5,27 +5,26 @@ import json
 import os
 from datetime import datetime
 
-DB_PATH = "./data"
 LOG_PATH = "./logs"
 
-
 LOG_FILE = os.path.join(LOG_PATH, "messages.log")
-DB_FILE = os.path.join(DB_PATH, "iot_database.db")
 
+# DB_PATH = "./data"
+# DB_FILE = os.path.join(DB_PATH, "iot_database.db")
 
-print(f"\n--------------> {LOG_FILE} \n")
+# # Ensure directories exists
+# os.makedirs(DB_PATH, exist_ok=True)
 
-# Ensure directories exists
-os.makedirs(DB_PATH, exist_ok=True)
-
-# Ensure log file exists
-if not os.path.exists(DB_FILE):
-    open(DB_FILE, "w").close()  # Create an empty file
+# # Ensure log file exists
+# if not os.path.exists(DB_FILE):
+#     open(DB_FILE, "w").close()  # Create an empty file
 
 # logging configurations
 logging.basicConfig(filename=LOG_FILE, level=logging.INFO, format='%(asctime)s - %(levelname)s: %(message)s')
 
 # logging.basicConfig(filename='error.log', level=logging.INFO, format='%(asctime)s:%(levelname)s:%(message)s')
+
+DB_FILE = os.getenv("DB_PATH", "/data/iot_database.db")
 
 # Database setup
 conn = sqlite3.connect(DB_FILE, check_same_thread=False)
