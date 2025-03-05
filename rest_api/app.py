@@ -3,15 +3,21 @@ import sqlite3
 import os
 import logging
 
+from dotenv import load_dotenv
+
+load_dotenv()
+
 # Configure logging
 LOG_DIR = os.path.join(os.path.dirname(__file__), './logs')
 os.makedirs(LOG_DIR, exist_ok=True)
 logging.basicConfig(filename=os.path.join(LOG_DIR, 'api.log'), level=logging.INFO, format='%(asctime)s - %(levelname)s - %(message)s')
 
+# Database configuration
+# DB_PATH = os.path.join(os.path.dirname(__file__), '../data/iot_database.db')
+DB_PATH = os.getenv("DB_PATH", "/data/test.db")
+
 app = Flask(__name__)
 API_VERSION = '/api/v1'
-# DB_PATH = os.path.join(os.path.dirname(__file__), '../mqtt_client/data/iot_database.db')
-DB_PATH = os.getenv("DB_PATH", "/data/iot_database.db")
 
 @app.route("/", methods=['GET'])
 def home():

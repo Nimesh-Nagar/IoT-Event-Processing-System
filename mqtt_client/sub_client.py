@@ -11,13 +11,13 @@ from db import log_invalid_message, store_valid_message
 # MQTT_HOST ='localhost'
 # SUB_TOPIC = 'device/events'
 
-SUB_TOPIC = os.getenv("MQTT_TOPIC", "devices/events")
 MQTT_HOST = os.getenv("MQTT_BROKER_HOST", "mqtt-broker")
+SUB_TOPIC = os.getenv("MQTT_TOPIC", "device/events")
 
 QOS = 0
 PORT = 1883
 
-STOP = asyncio.Event()
+STOP = None
 
 def on_connect(client, flags, rc, properties):
     print('Connected to mqtt broker')
@@ -45,6 +45,8 @@ def ask_exit(*args):
     STOP.set()
 
 async def main(broker_host, port):
+    global STOP
+    STOP = asyncio.Event()
     client = MQTTClient("python-client")
 
     client.on_connect = on_connect
@@ -55,7 +57,7 @@ async def main(broker_host, port):
     # client.set_auth_credentials(token, None)
     await client.connect(host=broker_host, port=port)
 
-    client.publish('TEST/TIME', str(time.time()), qos=1)
+    # client.publish('TEST/TIME', str(time.time()), qos=1)
 
     try:
         await STOP.wait()
@@ -65,24 +67,24 @@ async def main(broker_host, port):
 
 
 if __name__ == '__main__':
-    # loop = asyncio.new_event_loop() # Ensuring a clean event loop
-    # asyncio.set_event_loop(loop)
+    loop = asyncio.new_event_loop() # Ensuring a clean event loop
+    asyncio.set_event_loop(loop)
 
-    # if os.name != "nt":  # Unix-based signal handling
-    #     loop.add_signal_handler(signal.SIGINT, ask_exit)
-    #     loop.add_signal_handler(signal.SIGTERM, ask_exit)
+    if os.name != "nt":  # Unix-based signal handling
+        loop.add_signal_handler(signal.SIGINT, ask_exit)
+        loop.add_signal_handler(signal.SIGTERM, ask_exit)
 
-    # try:
-    #     loop.run_until_complete(main(MQTT_HOST, PORT))
-    # finally:
-    #     loop.close()
+    try:
+        loop.run_until_complete(main(MQTT_HOST, PORT))
+    finally:
+        loop.close()
 
-    loop = asyncio.get_event_loop()  # Use the default event loop
+    # loop = asyncio.get_event_loop()  # Use the default event loop
 
-    loop.add_signal_handler(signal.SIGINT, ask_exit)
-    loop.add_signal_handler(signal.SIGTERM, ask_exit)
+    # loop.add_signal_handler(signal.SIGINT, ask_exit)
+    # loop.add_signal_handler(signal.SIGTERM, ask_exit)
 
-    asyncio.run(main(MQTT_HOST, PORT))  # Use asyncio.run instead of run_until_complete()
+    # asyncio.run(main(MQTT_HOST, PORT))  # Use asyncio.run instead of run_until_complete()
 
     
 

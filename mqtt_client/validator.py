@@ -2,12 +2,15 @@ import json
 import logging 
 import os
 from datetime import datetime
+from dotenv import load_dotenv
 
-LOG_PATH = "./logs"
-LOG_FILE = os.path.join(LOG_PATH, "messages.log")
+load_dotenv()
 
+LOG_PATH = os.path.join(os.path.dirname(__file__), './logs')
 # Ensure logs directory exists
 os.makedirs(LOG_PATH, exist_ok=True)
+
+LOG_FILE = os.path.join(LOG_PATH, "messages.log")
 
 # Ensure log file exists
 if not os.path.exists(LOG_FILE):

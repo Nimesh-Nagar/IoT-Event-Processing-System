@@ -37,3 +37,192 @@
 2025-03-04 12:37:29,738 - INFO -  * Debugger PIN: 776-848-266
 2025-03-04 12:37:45,796 - INFO -  * Detected change in '/home/nimesh/cloud/IoT-Event-Processing-System/rest_api/app.py', reloading
 2025-03-04 12:37:45,818 - INFO -  * Restarting with stat
+2025-03-05 17:09:15,922 - INFO - Starting Flask API service
+2025-03-05 17:09:15,941 - INFO - [31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on all addresses (0.0.0.0)
+ * Running on http://127.0.0.1:5000
+ * Running on http://192.168.191.130:5000
+2025-03-05 17:09:15,941 - INFO - [33mPress CTRL+C to quit[0m
+2025-03-05 17:09:15,942 - INFO -  * Restarting with stat
+2025-03-05 17:09:16,042 - INFO - Starting Flask API service
+2025-03-05 17:09:16,049 - WARNING -  * Debugger is active!
+2025-03-05 17:09:16,103 - INFO -  * Debugger PIN: 142-573-314
+2025-03-05 17:09:52,649 - WARNING - Missing required device_id parameter
+2025-03-05 17:09:52,649 - INFO - 127.0.0.1 - - [05/Mar/2025 17:09:52] "[31m[1mGET /api/v1/events HTTP/1.1[0m" 400 -
+2025-03-05 17:09:52,723 - INFO - 127.0.0.1 - - [05/Mar/2025 17:09:52] "[33mGET /favicon.ico HTTP/1.1[0m" 404 -
+2025-03-05 17:09:58,343 - INFO - Fetching all devices
+2025-03-05 17:09:58,344 - INFO - 1 devices fetched successfully
+2025-03-05 17:09:58,344 - INFO - 127.0.0.1 - - [05/Mar/2025 17:09:58] "GET /api/v1/devices HTTP/1.1" 200 -
+2025-03-05 17:09:58,366 - INFO - 127.0.0.1 - - [05/Mar/2025 17:09:58] "[33mGET /favicon.ico HTTP/1.1[0m" 404 -
+2025-03-05 17:11:15,767 - INFO - Starting Flask API service
+2025-03-05 17:11:15,777 - INFO - [31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on all addresses (0.0.0.0)
+ * Running on http://127.0.0.1:5000
+ * Running on http://192.168.191.130:5000
+2025-03-05 17:11:15,777 - INFO - [33mPress CTRL+C to quit[0m
+2025-03-05 17:11:15,777 - INFO -  * Restarting with stat
+2025-03-05 17:11:15,897 - INFO - Starting Flask API service
+2025-03-05 17:11:15,927 - WARNING -  * Debugger is active!
+2025-03-05 17:11:15,932 - INFO -  * Debugger PIN: 142-573-314
+2025-03-05 17:11:30,738 - INFO - Fetching all devices
+2025-03-05 17:11:30,739 - INFO - 2 devices fetched successfully
+2025-03-05 17:11:30,739 - INFO - 127.0.0.1 - - [05/Mar/2025 17:11:30] "GET /api/v1/devices HTTP/1.1" 200 -
+2025-03-05 17:11:30,792 - INFO - 127.0.0.1 - - [05/Mar/2025 17:11:30] "[33mGET /favicon.ico HTTP/1.1[0m" 404 -
+2025-03-05 17:11:40,785 - INFO - Fetching events for device_id: 1001
+2025-03-05 17:11:40,785 - INFO - 6 events fetched for device_id: 1001
+2025-03-05 17:11:40,785 - INFO - 192.168.191.130 - - [05/Mar/2025 17:11:40] "GET /api/v1/events?device_id=1001 HTTP/1.1" 200 -
+2025-03-05 17:11:40,878 - ERROR - 192.168.191.130 - - [05/Mar/2025 17:11:40] code 400, message Bad request version (']ýíø6\x17U\x83²\x00"\x13\x01\x13\x03\x13\x02À+À/Ì©Ì¨À,À0À')
+2025-03-05 17:11:40,878 - INFO - 192.168.191.130 - - [05/Mar/2025 17:11:40] "[35m[1m\x16\x03\x01\x07O\x01\x00\x07K\x03\x03æ&$`içÚsÿ¸YÜ9Ñ¼zÚ\x0fì¿4\x0b\x9a= ð\x0b>á>./ @f\x8aêS:\x14\x87\x86>\x97s¬}9³\x8d\x9c\x88G{\x86 ]ýíø6\x17U\x83²\x00"\x13\x01\x13\x03\x13\x02À+À/Ì©Ì¨À,À0À[0m" HTTPStatus.BAD_REQUEST -
+2025-03-05 17:11:40,879 - ERROR - 192.168.191.130 - - [05/Mar/2025 17:11:40] code 400, message Bad request version ('©Wì\x92ô¡\x00"\x13\x01\x13\x03\x13\x02À+À/Ì©Ì¨À,À0À')
+2025-03-05 17:11:40,879 - INFO - 192.168.191.130 - - [05/Mar/2025 17:11:40] "[35m[1m\x16\x03\x01\x02~\x01\x00\x02z\x03\x03ÒÊF\x85!2\x0b\x17ów!ýÚ\x04OÄ\x9b\x97[Ö\x8f\x17\x92I«Þ\x8d®\x95¦b­ ,ö<Áâ\x14\x1f6) Á¾\x98\x9cë¯Já<\x12¡¸J\x93>\x1c©Wì\x92ô¡\x00"\x13\x01\x13\x03\x13\x02À+À/Ì©Ì¨À,À0À[0m" HTTPStatus.BAD_REQUEST -
+2025-03-05 17:11:45,635 - INFO - Fetching events for device_id: 1002
+2025-03-05 17:11:45,635 - INFO - 4 events fetched for device_id: 1002
+2025-03-05 17:11:45,635 - INFO - 192.168.191.130 - - [05/Mar/2025 17:11:45] "GET /api/v1/events?device_id=1002 HTTP/1.1" 200 -
+2025-03-05 17:11:45,676 - ERROR - 192.168.191.130 - - [05/Mar/2025 17:11:45] code 400, message Bad request version ('&W\x13©\x06\x1aáÀLl3Ã\x1b,\x91\x95Ö\x9c×N=½\x0eêÔ@æ(å\x00"\x13\x01\x13\x03\x13\x02À+À/Ì©Ì¨À,À0À')
+2025-03-05 17:11:45,676 - INFO - 192.168.191.130 - - [05/Mar/2025 17:11:45] "[35m[1m\x16\x03\x01\x07O\x01\x00\x07K\x03\x03à\x0b@¡1¼\x96]\x14Çß\x8c Ç\x90X\x11e\x04AÆ;wï\x80QÜêl¦B½ :E\x85&W\x13©\x06\x1aáÀLl3Ã\x1b,\x91\x95Ö\x9c×N=½\x0eêÔ@æ(å\x00"\x13\x01\x13\x03\x13\x02À+À/Ì©Ì¨À,À0À[0m" HTTPStatus.BAD_REQUEST -
+2025-03-05 17:11:45,682 - ERROR - 192.168.191.130 - - [05/Mar/2025 17:11:45] code 400, message Bad request version ('®ìÅµÍ$¢\x91\x00"\x13\x01\x13\x03\x13\x02À+À/Ì©Ì¨À,À0À')
+2025-03-05 17:11:45,682 - INFO - 192.168.191.130 - - [05/Mar/2025 17:11:45] "[35m[1m\x16\x03\x01\x02~\x01\x00\x02z\x03\x03N\x02´ãßã¢\x09\x8b\x01ÉE×÷Ø\x07á\x00\x9b\x91»+íË\x0e>Ùð\x18W~ï ¨ª^A \x03¥®9:\x03H\x1f\x16îõÖÖq\x02½èÕ ®ìÅµÍ$¢\x91\x00"\x13\x01\x13\x03\x13\x02À+À/Ì©Ì¨À,À0À[0m" HTTPStatus.BAD_REQUEST -
+2025-03-05 17:11:58,947 - INFO - Fetching all devices
+2025-03-05 17:11:58,947 - INFO - 2 devices fetched successfully
+2025-03-05 17:11:58,948 - INFO - 192.168.191.130 - - [05/Mar/2025 17:11:58] "GET /api/v1/devices HTTP/1.1" 200 -
+2025-03-05 17:11:59,023 - ERROR - 192.168.191.130 - - [05/Mar/2025 17:11:59] code 400, message Bad request version ('\x86\x00"\x13\x01\x13\x03\x13\x02À+À/Ì©Ì¨À,À0À')
+2025-03-05 17:11:59,024 - INFO - 192.168.191.130 - - [05/Mar/2025 17:11:59] "[35m[1m\x16\x03\x01\x07O\x01\x00\x07K\x03\x03r*\x94\x87\x96L9*×ÇÄ4!Y\x92÷\x8dÀSé½\x0d\x18ó\x9f÷\x9bÙ²²Ê\x01 Ìö\x8a\x11§ó,V-ô¸ì\x0dføï|<\x8fx5BZMìã~W\x09»\x85\x86\x00"\x13\x01\x13\x03\x13\x02À+À/Ì©Ì¨À,À0À[0m" HTTPStatus.BAD_REQUEST -
+2025-03-05 17:11:59,026 - ERROR - 192.168.191.130 - - [05/Mar/2025 17:11:59] code 400, message Bad request version ('\x10k¿¡K\x00"\x13\x01\x13\x03\x13\x02À+À/Ì©Ì¨À,À0À')
+2025-03-05 17:11:59,029 - INFO - 192.168.191.130 - - [05/Mar/2025 17:11:59] "[35m[1m\x16\x03\x01\x02~\x01\x00\x02z\x03\x03\x0cúÅ\x96Î¤B=a\x05¬ÃM\x9cn\x9cÎ\x14\x83\x88\x0dìÈvj«qò[Tâª f`%»\x89-o¬\x0d\x12¾\x81ÎjØtBVÙanZ"\x98\x02­\x1e\x10k¿¡K\x00"\x13\x01\x13\x03\x13\x02À+À/Ì©Ì¨À,À0À[0m" HTTPStatus.BAD_REQUEST -
+2025-03-05 17:13:42,746 - INFO - Starting Flask API service
+2025-03-05 17:13:42,756 - INFO - [31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on all addresses (0.0.0.0)
+ * Running on http://127.0.0.1:5000
+ * Running on http://192.168.191.130:5000
+2025-03-05 17:13:42,756 - INFO - [33mPress CTRL+C to quit[0m
+2025-03-05 17:13:42,756 - INFO -  * Restarting with stat
+2025-03-05 17:13:42,853 - INFO - Starting Flask API service
+2025-03-05 17:13:42,861 - WARNING -  * Debugger is active!
+2025-03-05 17:13:42,861 - INFO -  * Debugger PIN: 142-573-314
+2025-03-05 17:14:36,009 - INFO - Fetching all devices
+2025-03-05 17:14:36,010 - ERROR - Error fetching devices: unable to open database file
+2025-03-05 17:14:36,010 - INFO - 127.0.0.1 - - [05/Mar/2025 17:14:36] "[35m[1mGET /api/v1/devices HTTP/1.1[0m" 500 -
+2025-03-05 17:14:36,055 - INFO - 127.0.0.1 - - [05/Mar/2025 17:14:36] "[33mGET /favicon.ico HTTP/1.1[0m" 404 -
+2025-03-05 17:15:30,395 - INFO - Starting Flask API service
+2025-03-05 17:15:30,404 - INFO - [31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on all addresses (0.0.0.0)
+ * Running on http://127.0.0.1:5000
+ * Running on http://192.168.191.130:5000
+2025-03-05 17:15:30,404 - INFO - [33mPress CTRL+C to quit[0m
+2025-03-05 17:15:30,404 - INFO -  * Restarting with stat
+2025-03-05 17:15:30,492 - INFO - Starting Flask API service
+2025-03-05 17:15:30,499 - WARNING -  * Debugger is active!
+2025-03-05 17:15:30,501 - INFO -  * Debugger PIN: 142-573-314
+2025-03-05 17:15:36,681 - INFO - Fetching all devices
+2025-03-05 17:15:36,681 - ERROR - Error fetching devices: unable to open database file
+2025-03-05 17:15:36,681 - INFO - 127.0.0.1 - - [05/Mar/2025 17:15:36] "[35m[1mGET /api/v1/devices HTTP/1.1[0m" 500 -
+2025-03-05 17:15:36,704 - INFO - 127.0.0.1 - - [05/Mar/2025 17:15:36] "[33mGET /favicon.ico HTTP/1.1[0m" 404 -
+2025-03-05 17:15:37,355 - INFO - Fetching all devices
+2025-03-05 17:15:37,355 - ERROR - Error fetching devices: unable to open database file
+2025-03-05 17:15:37,356 - INFO - 127.0.0.1 - - [05/Mar/2025 17:15:37] "[35m[1mGET /api/v1/devices HTTP/1.1[0m" 500 -
+2025-03-05 17:15:37,366 - INFO - 127.0.0.1 - - [05/Mar/2025 17:15:37] "[33mGET /favicon.ico HTTP/1.1[0m" 404 -
+2025-03-05 17:16:21,145 - INFO - Starting Flask API service
+2025-03-05 17:16:21,155 - INFO - [31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on all addresses (0.0.0.0)
+ * Running on http://127.0.0.1:5000
+ * Running on http://192.168.191.130:5000
+2025-03-05 17:16:21,155 - INFO - [33mPress CTRL+C to quit[0m
+2025-03-05 17:16:21,155 - INFO -  * Restarting with stat
+2025-03-05 17:16:21,271 - INFO - Starting Flask API service
+2025-03-05 17:16:21,278 - WARNING -  * Debugger is active!
+2025-03-05 17:16:21,278 - INFO -  * Debugger PIN: 142-573-314
+2025-03-05 17:16:33,311 - INFO -  * Detected change in '/home/nimesh/cloud/IoT-Event-Processing-System/rest_api/app.py', reloading
+2025-03-05 17:16:33,327 - INFO -  * Restarting with stat
+2025-03-05 17:16:33,405 - INFO - Starting Flask API service
+2025-03-05 17:16:33,412 - WARNING -  * Debugger is active!
+2025-03-05 17:16:33,412 - INFO -  * Debugger PIN: 142-573-314
+2025-03-05 17:17:00,617 - INFO - Starting Flask API service
+2025-03-05 17:17:00,628 - INFO - [31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on all addresses (0.0.0.0)
+ * Running on http://127.0.0.1:5000
+ * Running on http://192.168.191.130:5000
+2025-03-05 17:17:00,628 - INFO - [33mPress CTRL+C to quit[0m
+2025-03-05 17:17:00,629 - INFO -  * Restarting with stat
+2025-03-05 17:17:00,720 - INFO - Starting Flask API service
+2025-03-05 17:17:00,730 - WARNING -  * Debugger is active!
+2025-03-05 17:17:00,731 - INFO -  * Debugger PIN: 142-573-314
+2025-03-05 17:17:08,485 - INFO - Fetching events for device_id: 1001
+2025-03-05 17:17:08,486 - INFO - 6 events fetched for device_id: 1001
+2025-03-05 17:17:08,487 - INFO - 192.168.191.130 - - [05/Mar/2025 17:17:08] "GET /api/v1/events?device_id=1001 HTTP/1.1" 200 -
+2025-03-05 17:17:08,532 - ERROR - 192.168.191.130 - - [05/Mar/2025 17:17:08] code 400, message Bad HTTP/0.9 request type ('\x16\x03\x01\x07O\x01\x00\x07K\x03\x03Îµ¤¤')
+2025-03-05 17:17:08,533 - INFO - 192.168.191.130 - - [05/Mar/2025 17:17:08] "[35m[1m\x16\x03\x01\x07O\x01\x00\x07K\x03\x03Îµ¤¤\x0b{äÝH\x8b\x12Êìðv\x94Jþ[0m" HTTPStatus.BAD_REQUEST -
+2025-03-05 17:17:08,534 - ERROR - 192.168.191.130 - - [05/Mar/2025 17:17:08] code 400, message Bad request version ('èE¢{D\'é-l\x8dØ\x1a&\x1aò¹RE\x0fÝîA\x8dôé¦\x9a\x82\x9a$`²\x00"\x13\x01\x13\x03\x13\x02À+À/Ì©Ì¨À,À0À')
+2025-03-05 17:17:08,534 - INFO - 192.168.191.130 - - [05/Mar/2025 17:17:08] "[35m[1m\x16\x03\x01\x02~\x01\x00\x02z\x03\x03\x8e]]ÙÉãÂD?!KB\x0côØÇ\x99óÊÎ\x11SLgõ½ôè\x18\x8a<R èE¢{D'é-l\x8dØ\x1a&\x1aò¹RE\x0fÝîA\x8dôé¦\x9a\x82\x9a$`²\x00"\x13\x01\x13\x03\x13\x02À+À/Ì©Ì¨À,À0À[0m" HTTPStatus.BAD_REQUEST -
+2025-03-05 17:17:16,588 - INFO - Fetching all devices
+2025-03-05 17:17:16,588 - INFO - 2 devices fetched successfully
+2025-03-05 17:17:16,588 - INFO - 192.168.191.130 - - [05/Mar/2025 17:17:16] "GET /api/v1/devices HTTP/1.1" 200 -
+2025-03-05 17:17:16,609 - ERROR - 192.168.191.130 - - [05/Mar/2025 17:17:16] code 400, message Bad request version ('#Ü2FêìÀu3B/<ÿ|-ß»þ\x87-\'Üþ\x80\x9bhÅAUèÖl\x00"\x13\x01\x13\x03\x13\x02À+À/Ì©Ì¨À,À0À')
+2025-03-05 17:17:16,609 - INFO - 192.168.191.130 - - [05/Mar/2025 17:17:16] "[35m[1m\x16\x03\x01\x07O\x01\x00\x07K\x03\x03É¹V\x14¤\x02Ôµ¾\x0fí\x0dÃ}±²ÜC\x89¦úµ"\x82\x1bÍ]|\x14\x93î\x96 #Ü2FêìÀu3B/<ÿ|-ß»þ\x87-'Üþ\x80\x9bhÅAUèÖl\x00"\x13\x01\x13\x03\x13\x02À+À/Ì©Ì¨À,À0À[0m" HTTPStatus.BAD_REQUEST -
+2025-03-05 17:17:16,612 - ERROR - 192.168.191.130 - - [05/Mar/2025 17:17:16] code 400, message Bad request version ('\x9e|ÃuÇ³\x8c;0=¨<6Óv\x9f\x00"\x13\x01\x13\x03\x13\x02À+À/Ì©Ì¨À,À0À')
+2025-03-05 17:17:16,613 - INFO - 192.168.191.130 - - [05/Mar/2025 17:17:16] "[35m[1m\x16\x03\x01\x02~\x01\x00\x02z\x03\x03§\x1cW\x8b|2\x8fÓ4m3·èå×bþÞG²RìÙ¯õ\x0dk\x94ú\x9d£) \x01\x1dtÿ{­<\x0fC°ã\x9a\x82g> \x9e|ÃuÇ³\x8c;0=¨<6Óv\x9f\x00"\x13\x01\x13\x03\x13\x02À+À/Ì©Ì¨À,À0À[0m" HTTPStatus.BAD_REQUEST -
+2025-03-05 17:17:35,844 - INFO -  * Detected change in '/home/nimesh/cloud/IoT-Event-Processing-System/rest_api/app.py', reloading
+2025-03-05 17:17:35,864 - INFO -  * Restarting with stat
+2025-03-05 17:17:35,954 - INFO - Starting Flask API service
+2025-03-05 17:17:35,961 - WARNING -  * Debugger is active!
+2025-03-05 17:17:35,962 - INFO -  * Debugger PIN: 142-573-314
+2025-03-05 17:17:41,982 - INFO -  * Detected change in '/home/nimesh/cloud/IoT-Event-Processing-System/rest_api/app.py', reloading
+2025-03-05 17:17:42,001 - INFO -  * Restarting with stat
+2025-03-05 17:17:42,080 - INFO - Starting Flask API service
+2025-03-05 17:17:42,086 - WARNING -  * Debugger is active!
+2025-03-05 17:17:42,087 - INFO -  * Debugger PIN: 142-573-314
+2025-03-05 18:01:38,576 - INFO - Starting Flask API service
+2025-03-05 18:01:52,229 - INFO - Starting Flask API service
+2025-03-05 18:01:52,241 - INFO - [31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on all addresses (0.0.0.0)
+ * Running on http://127.0.0.1:5001
+ * Running on http://192.168.191.130:5001
+2025-03-05 18:01:52,242 - INFO - [33mPress CTRL+C to quit[0m
+2025-03-05 18:01:52,243 - INFO -  * Restarting with stat
+2025-03-05 18:01:52,346 - INFO - Starting Flask API service
+2025-03-05 18:01:52,355 - WARNING -  * Debugger is active!
+2025-03-05 18:01:52,357 - INFO -  * Debugger PIN: 142-573-314
+2025-03-05 18:04:22,334 - INFO - Starting Flask API service
+2025-03-05 18:04:22,345 - INFO - [31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on all addresses (0.0.0.0)
+ * Running on http://127.0.0.1:5000
+ * Running on http://192.168.191.130:5000
+2025-03-05 18:04:22,345 - INFO - [33mPress CTRL+C to quit[0m
+2025-03-05 18:04:22,345 - INFO -  * Restarting with stat
+2025-03-05 18:04:22,442 - INFO - Starting Flask API service
+2025-03-05 18:04:22,448 - WARNING -  * Debugger is active!
+2025-03-05 18:04:22,448 - INFO -  * Debugger PIN: 142-573-314
+2025-03-05 18:04:42,368 - INFO - Starting Flask API service
+2025-03-05 18:04:42,376 - INFO - [31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on all addresses (0.0.0.0)
+ * Running on http://127.0.0.1:5000
+ * Running on http://192.168.191.130:5000
+2025-03-05 18:04:42,376 - INFO - [33mPress CTRL+C to quit[0m
+2025-03-05 18:04:42,377 - INFO -  * Restarting with stat
+2025-03-05 18:04:42,473 - INFO - Starting Flask API service
+2025-03-05 18:04:42,481 - WARNING -  * Debugger is active!
+2025-03-05 18:04:42,481 - INFO -  * Debugger PIN: 142-573-314
+2025-03-05 18:05:01,542 - INFO - Starting Flask API service
+2025-03-05 18:05:01,550 - INFO - [31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on all addresses (0.0.0.0)
+ * Running on http://127.0.0.1:5000
+ * Running on http://192.168.191.130:5000
+2025-03-05 18:05:01,550 - INFO - [33mPress CTRL+C to quit[0m
+2025-03-05 18:05:01,551 - INFO -  * Restarting with stat
+2025-03-05 18:05:01,644 - INFO - Starting Flask API service
+2025-03-05 18:05:01,650 - WARNING -  * Debugger is active!
+2025-03-05 18:05:01,651 - INFO -  * Debugger PIN: 142-573-314
+2025-03-05 18:06:12,554 - INFO - Starting Flask API service
+2025-03-05 18:06:12,564 - INFO - [31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on all addresses (0.0.0.0)
+ * Running on http://127.0.0.1:5000
+ * Running on http://192.168.191.130:5000
+2025-03-05 18:06:12,564 - INFO - [33mPress CTRL+C to quit[0m
+2025-03-05 18:06:12,564 - INFO -  * Restarting with stat
+2025-03-05 18:06:12,655 - INFO - Starting Flask API service
+2025-03-05 18:06:12,662 - WARNING -  * Debugger is active!
+2025-03-05 18:06:12,662 - INFO -  * Debugger PIN: 142-573-314
+2025-03-05 18:06:20,692 - INFO -  * Detected change in '/home/nimesh/cloud/IoT-Event-Processing-System/rest_api/app.py', reloading
+2025-03-05 18:06:20,711 - INFO -  * Restarting with stat
+2025-03-05 18:06:20,805 - INFO - Starting Flask API service
+2025-03-05 18:06:20,812 - WARNING -  * Debugger is active!
+2025-03-05 18:06:20,812 - INFO -  * Debugger PIN: 142-573-314

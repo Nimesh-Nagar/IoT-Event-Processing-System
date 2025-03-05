@@ -3,7 +3,7 @@ import json
 from gmqtt import Client as MQTTClient
 from datetime import datetime
 
-MQTT_HOST = "localhost" 
+MQTT_HOST = "localhost"  #docker mqtt-broker ip
 PORT = 1883
 PUB_TOPIC = "device/events"
 
@@ -26,7 +26,7 @@ async def publish_message():
     message1 = {
         "device_id": "1001",
         "sensor_type": "humidity",
-        "sensor_value": 70.6,
+        "sensor_value": 82.2,
         "timestamp": datetime.now().isoformat()
         # "timestamp": "12:13:55"
     }
@@ -39,7 +39,7 @@ async def publish_message():
         # "timestamp": "12:13:55"
     }
 
-    json_payload = json.dumps(message2) #change message number accordingly
+    json_payload = json.dumps(message1) #change message number accordingly
 
     client.publish(PUB_TOPIC, json_payload, qos=1)
     print(f"Published: {json_payload}")
