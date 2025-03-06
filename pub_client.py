@@ -34,12 +34,12 @@ async def publish_message():
     message2 = {
         "device_id": "1002",
         "sensor_type": "temperature",
-        "sensor_value": 28.5,
+        "sensor_value": 30.5,
         "timestamp": datetime.now().isoformat()
         # "timestamp": "12:13:55"
     }
 
-    json_payload = json.dumps(message1) #change message number accordingly
+    json_payload = json.dumps(message2) #change message number accordingly
 
     client.publish(PUB_TOPIC, json_payload, qos=1)
     print(f"Published: {json_payload}")
